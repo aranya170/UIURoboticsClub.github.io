@@ -7,7 +7,7 @@
     <title>Event Details - UIU Robotics Club</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/includes/Icon.png" type="image/png">
+    <link rel="icon" href="Icon.png" type="image/png">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
@@ -90,10 +90,10 @@
                             <span class="text-[#273F4F] text-sm">Online Event</span>
                         </div>
                     </div>
-                    <a href="../Events/event_reg.html"><button class="bg-[#FE7743] hover:bg-[#e56a38] text-white font-semibold py-3 px-8 rounded-full transition-all hover-scale">Register Now</button></a>
+                    <a href="event_reg.html"><button class="bg-[#FE7743] hover:bg-[#e56a38] text-white font-semibold py-3 px-8 rounded-full transition-all hover-scale">Register Now</button></a>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="../includes/photo1.jpg" alt="Event Banner" class="w-full h-auto rounded-xl shadow-lg">
+                    <img src="photo1.jpg" alt="Event Banner" class="w-full h-auto rounded-xl shadow-lg">
                 </div>
             </div>
         </section>
@@ -166,7 +166,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Logo and Club Name -->
                 <div class="flex flex-col items-center md:items-start">
-                    <img src="../includes/Icon.png" alt="UIU Robotics Club Logo" class="h-16 w-16 mb-4">
+                    <img src="Icon.png" alt="UIU Robotics Club Logo" class="h-16 w-16 mb-4">
                     <h3 class="text-xl font-bold text-[#FE7743]">UIU Robotics Club</h3>
                     <p class="text-sm mt-2">A Step Towards Infinity</p>
                 </div>
@@ -220,7 +220,7 @@
     <script>
         // Fetch and insert navbar
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('../includes/navbar.html')
+            fetch('navbar.html')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to load navbar');
