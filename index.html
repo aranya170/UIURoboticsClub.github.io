@@ -189,56 +189,6 @@
 
 <body class="bg-[#EFEEEA] text-[#273F4F] min-h-screen">
     <div id="navbar">
-        <nav class="glass-effect fixed top-0 w-full z-20 shadow-lg">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16">
-                    <div class="flex items-center">
-                        <span class="font-bold text-2xl text-[#FE7743]" id="logo">
-                            <img src="/Logo.png" alt="UIU Robotics Club" class="h-20 w-auto">
-                        </span>
-                    </div>
-                    <div class="hidden sm:flex sm:items-center space-x-6">
-                        <a href="#"
-                            class="text-sm font-semibold text-[#273F4F] hover:text-[#FE7743] transition-colors">Home</a>
-                        <a href="#"
-                            class="text-sm font-semibold text-[#273F4F] hover:text-[#FE7743] transition-colors">About</a>
-                        <a href="#"
-                            class="text-sm font-semibold text-[#273F4F] hover:text-[#FE7743] transition-colors">Services</a>
-                        <a href="#"
-                            class="text-sm font-semibold text-[#273F4F] hover:text-[#FE7743] transition-colors">Contact</a>
-                    </div>
-                    <div class="flex items-center sm:hidden">
-                        <button type="button"
-                            class="text-[#273F4F] hover:text-[#FE7743] focus:outline-none focus:ring-2 focus:ring-[#FE7743]"
-                            aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
-                            <svg class="h-6 w-6 hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16m-7 6h7" />
-                            </svg>
-                            <svg class="h-6 w-6 close-icon hidden" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="sm:hidden hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1 bg-white bg-opacity-90">
-                    <a href="#"
-                        class="block px-3 py-2 text-base font-semibold text-[#273F4F] hover:text-[#FE7743] hover:bg-gray-100 transition-colors">Home</a>
-                    <a href="#"
-                        class="block px-3 py-2 text-base font-semibold text-[#273F4F] hover:text-[#FE7743] hover:bg-gray-100 transition-colors">About</a>
-                    <a href="#"
-                        class="block px-3 py-2 text-base font-semibold text-[#273F4F] hover:text-[#FE7743] hover:bg-gray-100 transition-colors">Services</a>
-                    <a href="#"
-                        class="block px-3 py-2 text-base font-semibold text-[#273F4F] hover:text-[#FE7743] hover:bg-gray-100 transition-colors">Contact</a>
-                </div>
-            </div>
-        </nav>
-        
     </div>
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-18 pb-10">
         <section class="pt-20 pb-10 flex flex-col md:flex-row items-center justify-between">
@@ -861,6 +811,44 @@
         </div>
     </footer>
     <script>
+        // Fetch and insert navbar
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load navbar');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+
+                    // Initialize mobile menu toggle after navbar is loaded
+                    const mobileMenuButton = document.getElementById('mobile-menu-button');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const hamburgerIcon = mobileMenuButton.querySelector('.hamburger-icon');
+                    const closeIcon = mobileMenuButton.querySelector('.close-icon');
+
+                    if (mobileMenuButton && mobileMenu && hamburgerIcon && closeIcon) {
+                        mobileMenuButton.addEventListener('click', () => {
+                            const isHidden = mobileMenu.classList.contains('hidden');
+                            mobileMenu.classList.toggle('hidden');
+                            hamburgerIcon.classList.toggle('hidden', !isHidden);
+                            closeIcon.classList.toggle('hidden', isHidden);
+                            mobileMenuButton.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+                        });
+                    } else {
+                        console.error('Mobile menu elements not found');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading navbar:', error);
+                    document.getElementById('navbar').innerHTML = '<p>Error loading navigation bar.</p>';
+                });
+        });
+
+        lucide.createIcons();
+
         document.addEventListener('DOMContentLoaded', () => {
         const carousel = document.querySelector('.photo-carousel');
         const slides = document.querySelectorAll('.slides img');
