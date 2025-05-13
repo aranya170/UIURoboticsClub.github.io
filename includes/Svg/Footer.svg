@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="494" fill="none" preserveAspectRatio="none"
+        viewBox="0 0 1435 494" class="sm:hidden xs:hidden lg:block absolute bottom-0 left-0 m-[15px] -z-10">
+        <path fill="#262626"
+            d="M0 10C0 4.477 4.477 0 10 0h363.802a9.999 9.999 0 018.461 4.67l24.992 39.668a9.998 9.998 0 008.46 4.67h828.325c3.51 0 6.77 1.843 8.58 4.855l17.69 29.496a10.015 10.015 0 008.58 4.855h122.54c5.52 0 10 4.477 10 10V484c0 5.523-4.48 10-10 10H10c-5.523 0-10-4.477-10-10V10z">
+        </path>
+    </svg>

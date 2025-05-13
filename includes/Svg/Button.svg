@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="215" height="65" fill="none" viewBox="0 0 215 65"
+                class="main-svg">
+                <path fill="#FF3215" fill-rule="evenodd" class="pulse"
+                    d="M0 16.878L17.986 0H6.469C2.896 0 0 2.91 0 6.5v10.378z" clip-rule="evenodd"></path>
+                <path fill="#D9D9D9"
+                    d="M215 32.262a6.502 6.502 0 00-4.066-6.037c-.453-.336-.878-.63-1.228-.86a4377.4 4377.4 0 00-12.794-9.115c-1.871-1.32-2.511-2.877-2.647-3.927V6.5c0-3.59-2.897-6.5-6.469-6.5H19.751L0 18.534V58.5C0 62.09 2.896 65 6.469 65h202.062c3.573 0 6.469-2.91 6.469-6.5V32.262z">
+                </path>
+                <text x="107.5" y="32.5" font-family="Arial, sans-serif" font-size="20" fill="#343434"
+                    text-anchor="middle" dominant-baseline="middle">Click Me</text>
+            </svg>
