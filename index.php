@@ -11,38 +11,38 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
     <style>
-    body {
-        font-family: 'Exo 2', sans-serif;
-    }
-
-    .animate-fade-in-up {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeInUp 0.7s ease forwards;
-    }
-
-    @keyframes fadeInUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
+        body {
+            font-family: 'Exo 2', sans-serif;
         }
-    }
 
-    .main-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-    }
+        .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.7s ease forwards;
+        }
 
-    .main-btn:hover .pulse {
-        fill: #F79B72;
-        /* Darker red on hover for effect */
-    }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .main-btn:focus {
-        outline: none;
-    }
+        .main-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .main-btn:hover .pulse {
+            fill: #F79B72;
+            /* Darker red on hover for effect */
+        }
+
+        .main-btn:focus {
+            outline: none;
+        }
     </style>
 </head>
 
@@ -140,6 +140,19 @@
                         <div class="bg-[#ff0302] absolute -top-[3px] left-0 bottom-0 w-[8px] h-[8px] rounded-full">
                         </div>
                     </div>
+                </div>
+            </section>
+            <section class="flex">
+                <div class="container">
+                    <svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Main box with rounded corners -->
+                        <rect x="20" y="20" width="160" height="110" rx="10" ry="10" fill="#f0f0f0" />
+                        <!-- Screws (circles) on each side -->
+                        <circle cx="30" cy="30" r="5" fill="#666" />
+                        <circle cx="170" cy="30" r="5" fill="#666" />
+                        <circle cx="30" cy="120" r="5" fill="#666" />
+                        <circle cx="170" cy="120" r="5" fill="#666" />
+                    </svg>
                 </div>
             </section>
             <section class="flex">
